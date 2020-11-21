@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    padding: 10px;
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    width: 40%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.modal--hide {
+    display: none;
+}
+
+.modal__content {
+    font-size: 1.2rem;
+}
+
+.modal__footer {
+    padding-top: 50px;
+    text-align: right;
+}

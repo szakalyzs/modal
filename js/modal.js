@@ -2,6 +2,6 @@
 const button = document.querySelector('.btn');
 
 button.addEventListener('click', () => {
-    alert('OK');
-
+    const modal = document.querySelector('.modal--hide');
+    modal.setAttribute('class', 'modal');
 });
