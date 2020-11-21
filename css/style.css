@@ -8,8 +8,39 @@ body {
     padding: 10px;
 }
 
-.modal { 
+.header__btn {
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.cover {
     display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+    animation: cover .3s;
+}
+
+@keyframes cover {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.cover--hide {
+    display: none;
+    opacity: 0;
+    animation: cover_hide .3s;
+}
+
+@keyframes cover_hide {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.modal { 
     position: fixed;
     width: 40%;
     top:50%;
@@ -17,14 +48,22 @@ body {
     transform: translate(-50%, -50%);
     padding: 20px;
     border: 1px solid rgba(0,0,0,0.4);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: rgb(255,255,255);
-    /* z-index: 99; */
+    box-shadow: 0 4px 8px 0 rgba(255,255,255,0.5);
+    background-color: rgb(255,255,255);   
 }
 
-.modal--hide {
-    display: none;
-   /*  z-index: 99; */
+.modal__close {
+    background-color: rgb(255,255,255);
+    border: none;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.modal__close:hover {
+    cursor: pointer;
+    color: rgb(255,0,0);
 }
 
 .modal__content {
@@ -36,18 +75,3 @@ body {
     text-align: right;
 }
 
-.cover {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(0,0,0,0.7);
-    /* z-index: -1; */
-}
-
-.cover--hide {
-    display: none;
-    /* z-index: -1; */
-}

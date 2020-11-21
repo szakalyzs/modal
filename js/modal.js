@@ -1,10 +1,35 @@
 'use strict';
-const button = document.querySelector('.btn');
 
-button.addEventListener('click', () => {
-    const modal = document.querySelector('.modal--hide');
+(function modalOpen() {
+    const headerBtn = document.querySelector('.header__btn');
+    headerBtn.addEventListener('click', () => {
+        const cover = document.querySelector('.cover--hide');
+        cover.setAttribute('class', 'cover');
+        modal.focus();
+    });
+})();
+
+(function modalClose() {
+    const modalCloseBtn = document.querySelector('.modal__close');
+    modalCloseBtn.addEventListener('click', () => {
+        const cover = document.querySelector('.cover');
+        cover.setAttribute('class', 'cover--hide');
+    })
+})();
+
+(function modalClose2() {
     const cover = document.querySelector('.cover--hide');
-    cover.classList.replace('cover--hide','cover');
-    modal.classList.replace('modal--hide','modal');
-    //modal.setAttribute('class', 'modal');
-});
+    cover.addEventListener('click', (event) => {
+        const cover = document.querySelector('.cover');
+        if (event.target == cover) {
+            cover.setAttribute('class', 'cover--hide');
+        }
+    })
+})();
+
+/* (window.onclick = function (event) {
+    const cover = document.querySelector('.cover');
+    if (event.target == cover) {
+        cover.style.display = "none";
+    }
+})(); */
